@@ -2,7 +2,7 @@
 function computerPlay() {
 
     //returns either a rock, paper or scissors
-    let played = ["Rock", "Paper", "Scissors"];
+    let played = ["rock", "paper", "scissors"];
     let random_index = Math.floor(Math.random() * 3);
     return played[random_index]
 }
@@ -10,7 +10,7 @@ function computerPlay() {
 
 function playRound(yourSelection, computerSelection) {
 
-    let computer = computerSelection.toLowerCase()
+    let computer = computerSelection
     let you = yourSelection.toLowerCase()
 
     if (you == "rock") {
@@ -64,16 +64,42 @@ function game () {
 
     let yourTally = 0
     let computerTally = 0
+    let winner = ""
 
     for (let i = 0; i < 5; i++) {
-        let choice = prompt("Rock, Paper, Scissors -- Shoot!")
+        let choice = prompt(`Rock, Paper, Scissors -- Shoot! the score is ${yourTally} to ${computerTally}`)
         let yourChoice = choice
 
         let roundOutcome = playRound(yourChoice, computerPlay())
+        alert(roundOutcome)
 
+        if (roundOutcome.includes("win")) {
+            yourTally += 1
+        }
+        
+        else if (roundOutcome.includes("tie")) {
 
+        }
+
+        else {
+            computerTally +=1
+        }
 
      }
+
+    if (yourTally > computerTally) {
+        winner = "You Win a 5-round game of Rock Paper Scissors Against the Computer"
+    }
+
+    else if (computerTally == yourTally) {
+        winner = "Tie!"
+    }
+
+    else {
+        winner = "The Compter Wins"
+    }
+
+    return prompt(winner)
     
 
 }
