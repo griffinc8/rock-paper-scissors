@@ -9,11 +9,12 @@
 
 .results {
     text-align: center;
-    height: 15vh;
     display: flex;
     justify-content: center;
-    font-size: x-large;
+    font-size: 1cm;
+    margin-top: 100px;
 } 
+
 
 .button {
     background-color: #4CAF50; /* Green */

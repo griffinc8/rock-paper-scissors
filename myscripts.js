@@ -108,22 +108,18 @@ function game () {
 
 let btn = document.querySelectorAll(".button")
 btn.forEach( (e) => {
-    e.addEventListener('click', gameUI)
+    e.addEventListener('click', playgame_UI)
 })
 
 
-
-function gameUI(e) {
-     console.log(e)
+function playgame_UI() {
+    let yourChoice = this.id
+    let outcome = playRound(yourChoice, computerPlay())
+    window.alert(outcome)
 }
 
 
 
-
-if (typeof window !== "undefined") {
-    let btn = document.querySelectorAll(".button")
-    console.log(btn)
-}
 
 
 
