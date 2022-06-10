@@ -107,14 +107,15 @@ function game () {
 }
 
 let btn = document.querySelectorAll(".button")
-btn.forEach( (e) => {
 
-    e.addEventListener('click', () => {console.log(e)})
-
-
+btn.forEach((e) => {
+    e.addEventListener('click', () => {console.log(e.id)})
 })
 
-game()  
+
+
+
+
 
 if (typeof window !== "undefined") {
     let btn = document.querySelectorAll(".button")
