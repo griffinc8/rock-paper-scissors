@@ -1,18 +1,19 @@
 .buttons {
     display: flex;
     flex: 1;
-    min-height: 100vh;
+    min-height: 50vh;
     justify-content: center;
-    align-items: center;    margin-bottom: 40px;
+    align-items: center;    
+    margin-bottom: 40px;
 }
 
 .results {
-    margin-bottom: 50px;
-    max-width: 400px;
     text-align: center;
-    position: absolute;
-    height: 40vh;
-}
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    font-size: x-large;
+} 
 
 .button {
     background-color: #4CAF50; /* Green */

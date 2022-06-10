@@ -67,6 +67,7 @@ function game () {
     let winner = ""
 
     for (let i = 0; i < 5; i++) {
+
         let choice = prompt(`Rock, Paper, Scissors -- Shoot! the score is ${yourTally} to ${computerTally}`)
         let yourChoice = choice
 
@@ -105,5 +106,24 @@ function game () {
 
 }
 
+let btn = document.querySelectorAll(".button")
+btn.forEach( (e) => {
+
+    e.addEventListener('click', () => {console.log(e)})
+
+
+})
 
 game()  
+
+if (typeof window !== "undefined") {
+    let btn = document.querySelectorAll(".button")
+    console.log(btn)
+}
+
+
+
+
+
+
+
