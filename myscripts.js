@@ -116,15 +116,11 @@ btn.forEach ((e) => {
 function playgame_UI() {
     let yourChoice = this.id
     let outcome = playRound(yourChoice, computerPlay())
-    return console.log(outcome)
+    window.alert(outcome)
 }
 
 
 
-if (typeof window !== "undefined") {
-    let btn = document.querySelectorAll(".button")
-    console.log(btn)
-}
 
 
 
